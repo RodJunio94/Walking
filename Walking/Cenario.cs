@@ -7,8 +7,8 @@ internal class Cenario
 
     public Cenario(string chao, byte tamanho)
     {
-        Chao = chao;
-        Tamanho = tamanho;
+        this.Chao = chao;
+        this.Tamanho = tamanho;
     }
 
     public void imprime(Player p)
@@ -19,7 +19,7 @@ internal class Cenario
         //Imprime a primeira linha
         if(p.Pulando)
         {
-            for (byte i = 0; i <p.Posicao; i++)
+            for (byte i = 0; i < p.Posicao; i++)
             {
                Console.Write(" ");
             }
@@ -31,7 +31,7 @@ internal class Cenario
         }
 
         //Imprime a segunda linha
-        for (byte i = 0; i <p.Posicao; i++)
+        for (byte i = 0; i < p.Posicao; i++)
         {
             Console.Write(Chao);
         }
@@ -39,7 +39,7 @@ internal class Cenario
         if (p.Pulando) Console.Write(Chao);
         else Console.Write(p.Aparencia);
 
-        for (byte i = (byte)(p.Posicao + 1); i < Tamanho; i++)
+        for (byte i = 0; i < (Tamanho - p.Posicao); i++)
         {
             Console.Write(Chao);
         }

@@ -11,9 +11,9 @@ internal class Player
     public Player(string right, string left)
     {
         Posicao = 0;
-        Aparencia = right;
-        FacinRight = left;
-        FacinLeft = FacinRight;
+        FacinRight = right;
+        FacinLeft = left;
+        Aparencia = FacinRight;
         Pulando = false;
     }
 
